@@ -51,7 +51,7 @@ public:
         std::cout << "---------------------------\n";
     }
 
-    void findRecipeByName(const std::string& name) const {
+    void findRecipeByName(const std::string& name) {
         for (const auto& recipe : recipes) {
             if(recipe.potionName == name){
                 std::cout << "- 물약 이름: " << recipe.potionName << std::endl;
@@ -67,7 +67,7 @@ public:
         std::cout << "해당이름의 레시피가 없습니다." << std::endl;
     }
 
-    void findRecipesByIngredient(const std::string& ingredient) const {
+    void findRecipesByIngredient(const std::string& ingredient) {
         bool found = false;
         for (const auto& recipe : recipes) {
             for (const auto& ing : recipe.ingredients) {
